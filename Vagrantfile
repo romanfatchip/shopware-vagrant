@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.box = "bento/ubuntu-16.04"
 
-    config.vm.network :private_network, ip: "192.168.33.10"
+    config.vm.network :private_network, ip: "192.168.33.11"
     config.vm.network "forwarded_port", guest: 8000, host: 8094
     config.vm.network "forwarded_port", guest: 35729, host: 35729
 
@@ -16,10 +16,10 @@ Vagrant.configure("2") do |config|
 
     #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true, type: "smb"
     #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true, type: "nfs"
-    #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true;
+    config.vm.synced_folder "shopware_5.4", "/home/vagrant/www/shopware", create: true;
 
     config.vm.provider :virtualbox do |vb|
-        vb.name = "vagrant_shopware";
+        vb.name = "vagrant_shopware_afterbuy_api_0040158";
         vb.customize ["modifyvm", :id, "--cpus", 4]
         vb.customize ["modifyvm", :id, "--ioapic", "on"]
         vb.customize ["modifyvm", :id, "--memory", 2048]
