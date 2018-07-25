@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
       config.vm.provision "ansible_local" do |ansible|
         ansible.playbook = "ansible/playbook.yml"
         ansible.extra_vars = {
-          "shopware_app_host" => "192.168.33.10",
+          "shopware_app_host" => "192.168.33.11",
           "mysql_root_password" => "shopware"
         }
       end

@@ -1,3 +1,5 @@
 .vagrant
 .idea
 shopware_5.4
+
+*.sql
