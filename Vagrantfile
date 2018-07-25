@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
     #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true, type: "smb"
     #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true, type: "nfs"
-    #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true;
+    config.vm.synced_folder "src/", "/home/vagrant/www/shopware", create: true;
 
     config.vm.provider :virtualbox do |vb|
         vb.name = "vagrant_shopware";
