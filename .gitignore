@@ -2,5 +2,6 @@
 .idea
 shopware_5.4
 
+.DS_Store
 *.sql
 test.*
